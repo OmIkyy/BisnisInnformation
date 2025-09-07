@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Services Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .hero-bg {
+            background: url('https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/d03ec47e-ba30-4fdb-9f97-7e606f0a6eec.png') center/cover;
+            position: relative;
+        }
+        .hero-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+            transition: transform 0.3s ease;
+        }
+        .testimonial-slider {
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        .testimonial-slider div {
+            display: inline-block;
+            animation: slide 15s linear infinite;
+        }
+        @keyframes slide {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+        @media (max-width: 768px) {
+            .hero-text {
+                font-size: 1.5rem;
+            }
+            .service-card {
+                margin: 10px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <!-- Header -->
+    <header class="bg-blue-600 p-4 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-white text-2xl font-bold">Digital Services Pro</h1>
+            <nav class="hidden md:flex space-x-6">
+                <a href="#about" class="text-white hover:underline">About</a>
+                <a href="#services" class="text-white hover:underline">Services</a>
+                <a href="#why" class="text-white hover:underline">Why Us</a>
+                <a href="#testimonials" class="text-white hover:underline">Testimonials</a>
+                <a href="#contact" class="text-white hover:underline">Contact</a>
+            </nav>
+            <button id="menu-toggle" class="md:hidden text-white focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+        <nav id="mobile-menu" class="md:hidden hidden bg-blue-700 p-4">
+            <a href="#about" class="block text-white py-2">About</a>
+            <a href="#services" class="block text-white py-2">Services</a>
+            <a href="#why" class="block text-white py-2">Why Us</a>
+            <a href="#testimonials" class="block text-white py-2">Testimonials</a>
+            <a href="#contact" class="block text-white py-2">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-bg text-center text-white py-20 relative">
+        <div class="hero-bg">
+            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/e3e5745e-1239-405e-bd30-cd0f01ecf616.png" alt="Dynamic digital workspace with multiple screens showing website development, server setups, and premium APK interfaces in a modern office environment" class="absolute inset-0 w-full h-full object-cover" />
+        </div>
+        <div class="relative z-10">
+            <h2 class="text-4xl md:text-6xl font-bold mb-4 hero-text">Layanan Digital Terpercaya untuk Kebutuhan Anda</h2>
+            <p class="text-lg md:text-xl mb-8">Dari akun cPanel hingga VPS, APK premium, dan file digital – kami siap membantu!</p>
+            <a href="#services" class="bg-green-500 text-white px-6 py-3 rounded-full text-lg hover:bg-green-600 transition">Pelajari Lebih Lanjut</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h3 class="text-3xl md:text-4xl font-bold text-center mb-8 text-gray-800">Tentang Kami</h3>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-6 md:mb-0">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/acf1ea18-537c-4211-85aa-d0cbfe8dfd11.png" alt="Team of professional digital service experts collaborating on a project with laptops and servers visible in a bright, collaborative workspace" class="w-full rounded-lg shadow-lg" />
+                </div>
+                <div class="md:w-1/2 md:pl-8">
+                    <p class="text-gray-600 text-lg leading-relaxed">
+                        Kami adalah penyedia layanan digital terpercaya dengan pengalaman lebih dari 8 tahun. Tim ahli kami berkomitmen untuk memberikan solusi cepat, aman, dan berkualitas tinggi untuk semua kebutuhan Anda, mulai dari setup akun cPanel, penyediaan VPS, hingga pembuatan website dan distribusi APK premium. Kami menggunakan teknologi terdepan dan protokol keamanan mutakhir untuk memastikan kepuasan pelanggan maksimal.
+                    </p>
+                    <ul class="mt-4 list-disc list-inside text-gray-600">
+                        <li>Lisensi resmi dan Teruji</li>
+                        <li>Support multilingual 24/7</li>
+                        <li>Garansi uptime 99.9% untuk semua layanan</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h3 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">Layanan Kami</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-lg service-card">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/0c70b9d8-4709-4410-ad97-ee9eecd1b3fd.png" alt="Icons representing cPanel control panel features like file manager, domain setups, and email configurations in a colorful diagram" class="w-full mb-4 rounded" />
+                    <h4 class="text-xl font-bold mb-2">Akun cPanel</h4>
+                    <p class="text-gray-600 mb-4">Pembuatan akun cPanel lengkap dengan setup domain, email, dan instalasi CMS seperti WordPress. Fitur tambahan: backup otomatis, SSL gratis.</p>
+                    <p class="text-green-600 font-bold mb-4">Harga Mulai: Rp 50.000/bulan</p>
+                    <a href="#contact" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Pesan Sekarang</a>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg service-card">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/8a5aa01b-6362-48c7-ab82-ffd77734a1a7.png" alt="Illustration of powerful virtual private servers with cloud icons, security shields, and varying OS symbols like Linux kernel" class="w-full mb-4 rounded" />
+                    <h4 class="text-xl font-bold mb-2">VPS</h4>
+                    <p class="text-gray-600 mb-4">VPS dengan RAM sampai 16GB, SSD storage, dan full root access. Pilih OS favorit, instalasi mudah, monitoring 24/7.</p>
+                    <p class="text-green-600 font-bold mb-4">Harga Mulai: Rp 100.000/bulan</p>
+                    <a href="#contact" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Pelajari</a>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg service-card">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/e65fd985-757f-4f60-a96a-1449437f6fa1.png" alt="Website mockup showing responsive design on desktop and mobile, with e-commerce cart icons and security padlocks" class="w-full mb-4 rounded" />
+                    <h4 class="text-xl font-bold mb-2">Website & Fitur</h4>
+                    <p class="text-gray-600 mb-4">Pembuatan website custom dengan fitur seperti e-commerce, blog, atau portal. Integrasi API, optimasi SEO, dan maintenance gratis 1 tahun.</p>
+                    <p class="text-green-600 font-bold mb-4">Harga Mulai: Rp 1.500.000</p>
+                    <a href="#contact" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Hubungi</a>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg service-card">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/53cc6e8c-ebdb-4b59-b56a-acc84724d283.png" alt="Collection of premium mobile app icons for Android APK files, including games, tools, and productivity apps with star ratings" class="w-full mb-4 rounded" />
+                    <h4 class="text-xl font-bold mb-2">APK Premium & File</h4>
+                    <p class="text-gray-600 mb-4">APK premium berlisensi, file digital seperti e-book, scripts, dan software. Update reguler, jaminan antivirus, unduh instan.</p>
+                    <p class="text-green-600 font-bold mb-4">Harga Mulai: Rp 25.000/unit</p>
+                    <a href="#contact" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Beli</a>
+                </div>
+            </div>
+            <div class="mt-12 text-center">
+                <p class="text-gray-600 mb-4">Kami menawarkan diskon 10% untuk paket bundel akun cPanel + VPS + Website custom!</p>
+                <a href="#contact" class="bg-red-500 text-white px-6 py-3 rounded-full">Dapatkan Diskon</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section id="why" class="py-16 bg-white">
+        <div class="container mx-auto px-4 text-center">
+            <h3 class="text-3xl md:text-4xl font-bold mb-12 text-gray-800">Kenapa Pilih Kami?</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-6 bg-blue-50 rounded-lg">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/60391003-2ae6-44f2-93d6-6922eb25d540.png" alt="Speedometer icon with blue background indicating fast delivery and high performance for digital services" class="mb-4 mx-auto" />
+                    <h4 class="text-xl font-bold mb-2">Cepat & Efisien</h4>
+                    <p class="text-gray-600">Setup dalam 1 jam untuk kebanyakan layanan, dengan timeline transparan.</p>
+                </div>
+                <div class="p-6 bg-blue-50 rounded-lg">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/b256bf5e-fac9-4fea-bf8b-7fd563db1779.png" alt="Shield icon with red background symbolizing strong security protections for data and systems" class="mb-4 mx-auto" />
+                    <h4 class="text-xl font-bold mb-2">Keamanan Terjamin</h4>
+                    <p class="text-gray-600">Enkripsi end-to-end, firewall kuat, dan audit keamanan rutin.</p>
+                </div>
+                <div class="p-6 bg-blue-50 rounded-lg">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/a5fd2e2b-bfae-4905-9da4-0ccae387fa49.png" alt="Chat bubble icon with orange background representing 24/7 customer support availability" class="mb-4 mx-auto" />
+                    <h4 class="text-xl font-bold mb-2">Support 24/7</h4>
+                    <p class="text-gray-600">Tim ahli siap bantu via chat, email, atau telepon di luar jam kerja juga.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h3 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">Testimoni Pelanggan</h3>
+            <div class="testimonial-slider">
+                <div class="flex space-x-6 overflow-hidden">
+                    <div class="min-w-full md:min-w-1/2 bg-white p-6 rounded-lg shadow-lg">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/06280190-9a43-42aa-b1df-42de73756e1d.png" alt="Happy male client with satisfied expression, smiling while holding a laptop in a casual office setting" class="w-16 h-16 rounded-full mb-4" />
+                        <p class="text-gray-600 italic">"Layanan pembuatan akun cPanel dan VPS sangat cepat dan mudah. Supportnya juga sangat membantu! Sebenarnya, prosesnya hanya butuh 30 menit dan website saya langsung online. Rekomend banget."</p>
+                        <p class="text-gray-800 font-bold mt-2">– Andi, Developer dari Jakarta</p>
+                    </div>
+                    <div class="min-w-full md:min-w-1/2 bg-white p-6 rounded-lg shadow-lg">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/be211393-2819-47f9-b336-0fb2a6abf934.png" alt="Female customer with positive feedback, gesturing thumbs up next to a mobile phone displaying premium app" class="w-16 h-16 rounded-full mb-4" />
+                        <p class="text-gray-600 italic">"APK premium yang saya beli dari sini selalu update dan aman digunakan. Plus, ada garansi pengembalian jika tidak puas. Sudah beli lebih dari 10 APK dan tidak pernah ada masalah."</p>
+                        <p class="text-gray-800 font-bold mt-2">– Rina, Pengguna dari Surabaya</p>
+                    </div>
+                    <div class="min-w-full md:min-w-1/2 bg-white p-6 rounded-lg shadow-lg">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/4f105196-b516-4360-8f18-d7a98a5deef1.png" alt="Professional businessman reviewing website design on a desktop computer in a corporate environment" class="w-16 h-16 rounded-full mb-4" />
+                        <p class="text-gray-600 italic">"Website custom untuk bisnis saya dibuat dengan fitur lengkap, responsif di HP juga. Harga terjangkau dengan kualitas premium. Tim sangat profesional dan tepat waktu."</p>
+                        <p class="text-gray-800 font-bold mt-2">– Budi, Dari Betung</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-blue-600 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h3 class="text-3xl md:text-4xl font-bold mb-8">Hubungi Kami</h3>
+            <p class="text-xl mb-8">Siap untuk memulai proyek Anda? Kontak kami sekarang dan dapatkan konsultasi gratis!</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h4 class="text-2xl font-bold mb-2">WhatsApp</h4>
+                    <p>083176397914</p>
+                </div>
+                <div>
+                    <h4 class="text-2xl font-bold mb-2">Email</h4>
+                    <p>mrizky656565@gmail.com</p>
+                </div>
+                <div>
+                    <h4 class="text-2xl font-bold mb-2">TikTok</h4>
+                    <p>https://www.tiktok.com/@codemet.id?_t=ZS-8zWh07zTnBI&_r=1</p>
+                </div>
+            </div>
+            <a href="https://wa.me/6283176397914" target="_blank" class="bg-green-500 text-white px-6 py-3 rounded-full text-lg hover:bg-green-600 transition">Chat via WhatsApp</a>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-white py-6 text-center">
+        <p>© 2025 Digital Services Pro. All rights reserved. | Created with passion for digital solutions.</p>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Smooth scroll for links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                target.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>
+</content>
+</create_file>
